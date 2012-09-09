@@ -5,12 +5,18 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Natasha Murashev', 'nmurashev@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+DATABASES = {'default': {
+                'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+                'USER'   : 'nataliamurashev',
+                'HOST'   : 'localhost',
+                'NAME'   : 'weekendtrip',
+                }
+            }    
 BROKER_BACKEND = 'django'
 
 # Local time zone for this installation. Choices can be found here:
